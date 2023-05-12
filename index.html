@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>* {
+        margin: 0;
+        padding: 0;
+      }
+      
+      html {
+        box-sizing: border-box;
+        font-size: 10px;
+      }
+      
+      body {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-family: Poppins;
+        color: #011640;
+        overflow-x: hidden;
+      }
+      
+      h1 {
+        font-size: 7rem;
+        font-weight: 600;
+        margin: 8rem 0 2rem 0;
+      }
+      
+      @media (max-width: 650px){
+        h1 {
+          font-size: 5rem;
+        }
+      }
+      h1 {
+  font-size: 3vw;
+}
+
+.typing-text {
+  width: 5.2ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 4.5vw;
+  animation: typing 2s steps(18) infinite alternate,
+    blink 0.4s step-end infinite alternate;
+  text-shadow: 0px 0px 3px white;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (max-width: 507px) {
+  h1 {
+    font-size: 4vw;
+  }
+  .typing-text {
+    font-size: 8vw;
+  }
+}
+      
+      h2 {
+        margin-bottom: 3rem;
+      }
+      
+      li {
+        list-style: none;
+      }
+      
+      a {
+        color: #011640;
+        text-decoration: none;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      /* Navigation */
+      
+      .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        min-height: 75px;
+        background-color: #fff;
+        box-shadow: 0 1rem 1rem -1rem rgba(55, 56, 58, 0.2);
+        z-index: 10;
+      }
+      
+      nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      
+      nav li {
+        padding: 0px 0.8rem;
+      }
+      
+      nav .code {
+        color: white;
+        transition: color 0.3s ease-out;
+      }
+      
+      nav a:hover .code {
+        color: #F2797B;
+      }
+      
+      /* Welcome section */
+      
+      #welcome-section {
+        margin: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 65vh;
+      }
+      
+      @media (max-width: 1000px) {
+        #welcome-section {
+          text-align: center;
+          margin-top: 10rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      
+      .welcome-img  {
+        border-radius: 20px;
+        margin-top: 3rem;
+        width: 300px;
+        height: auto;
+      }
+      
+      #mobile-only {
+        display: none;
+      }
+      
+      @media (max-width: 850px){
+        #desktop-only {
+          display: none;
+        }
+        
+        #mobile-only {
+          display: initial;
+          width: 450px;
+          height: 42vh;
+          width: 50vh;
+        }
+      }
+      
+      #subheading {
+        font-size: 5rem;
+        font-weight: 600;
+        margin: 2rem 0;
+      }
+      #subheading span {
+        color: #F2797B;
+      }
+      #web {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin: 2rem 0;
+      }
+      #web span {
+        color: #F2797B;
+      }
+      
+      @media (max-width: 650px){
+        #subheading {
+          font-size: 4rem;
+        }
+      }
+      
+      /* About section */
+      
+      #about {
+        padding: 5rem 5rem 2rem 2rem;
+      }
+      
+      #about h2 {
+        text-align: center;
+      }
+      
+      #about-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
+      @media (max-width: 850px) {
+        #about-container {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      
+      #my-story {
+        width: 60%;
+        padding: 0 2rem;
+      }
+      
+      #interests-list {
+        background-color: #011640;
+        color: #fff;
+        padding: 3rem;
+        border-radius: 5px;
+      }
+      
+      @media (max-width: 850px) {
+        #my-story {
+          width: 100%;
+          margin-bottom: 5rem;
+        }
+        
+        #interests-list {
+          margin: auto;
+        }
+      }
+      
+      #interests-list > h3 {
+        text-align: center;
+        padding-bottom: 2rem;
+      } 
+      /* Projects section */
+      
+      #projects {
+        padding: 10rem 5rem;
+        text-align: center;
+      }
+      
+      #projects > p {
+        margin-bottom: 5rem;
+      }
+      
+      /* Contact section */
+      #contact {
+        margin-top: 2rem;
+        padding: 7rem 2.5rem;
+        text-align: center;
+        background-color: #011640;
+        color: #fff;
+      }  
+      .contact-icon {
+        width: 2rem;
+        padding: 1rem;
+        filter: invert(100%);
+      }
+      
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 4rem;
+        flex-wrap: wrap;
+      }
+      
+      .contact-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 1rem;
+      }
+      
+      
+      .contact-details:hover .contact-icon {
+        filter: invert(83%) sepia(39%) saturate(6798%) hue-rotate(308deg) brightness(92%) contrast(107%);
+      }
+      
+      .contact-details:hover {
+        color: #F2797B;
+      }
+      
+      ::-moz-selection {
+        color: #fff;
+        background: #02A1A3;
+      }
+      
+      ::selection {
+        color: #fff;
+        background: #02A1A3;
+      }
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+   
+      
+      /* Footer */
+      
+      footer {
+        text-align: center;
+        padding: 2rem 0;
+        background-color: #011640;
+        color: #fff;
+      }
+      
+      .heart::before {
+        content: '\2665';
+        color: #F2797B;
+        font-size: 1.6rem;
+      }
+      
+      footer .code {
+        color: #F2797B;
+      }
+         </style>
+    <title>Sahin | My Portfolio</title>
+</head>
+<body>
+    <nav id="navbar" class="nav">
+        <ul>
+          <li>
+            <a href="#about">
+              <span class="code">&lt;</span>
+              About
+              <span class="code">&#47;&gt;</span>
+            </a>
+          </li>
+          <li>
+      
+            <a href="#projects">
+              <span class="code">&lt;</span>
+              Projects
+              <span class="code">&#47;&gt;</span>
+            </a>
+      
+          </li>
+          <li>
+            <a href="#contact">
+              <span class="code">&lt;</span>
+              Contact
+              <span class="code">&#47;&gt;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <section id="welcome-section">
+        <div>
+          <h1 class="typing-text">Hello<span>,</span></h1>
+          <p id="subheading">I'm <span>Sahin</span></p>
+          <p id="web" >-Your Personal <span>Frontend</span> Web Developer</p>
+        </div>
+        <div>
+          <img class="welcome-img" id="desktop-only" src="portfolio.jpg">
+          <img class="welcome-img" id="mobile-only" src="portfolio.jpg">
+        </div>
+      </section>
+      
+      <section id="about">
+        <h2>My Story:</h2>
+        <div id="about-container">
+          <div id="my-story">
+            <p>I'm an Computer Science student with notable experience in web development. I am also interested in all aspects of technology and Internet Things. I'm passionate about website and I love creating beautiful websites. I really enjoy learning new things and I'm always open to new ideas and projects.</p>
+          </div>
+          <div id="interests-list">
+            <h3>Interests</h3>
+            <ul>
+              <li>Artificial Intelligence</li>
+              <li>Machine Learning</li>
+              <li>Blockchain</li>
+              <li>DevOps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <section id="projects">
+      <h2>My Work:</h2>
+        <p>Seasoned and independent Front End Developer with 5 years of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging.
+
+            Very passionate about aesthetics and UI design.. <br><br> &nbsp;
+            Deliver engaging user experience through optimization of images, code, and cross-browser compatibility, increasing Time on Page by +60 seconds for +50 websites
+                Expand features, refine code, and improve processes, producing smoother operations and enhancing user engagement
+                Designed dynamic and browser compatible pages using HTML5, CSS3, jQuery, and Javascript.
+                Built single page applications (SPA), responsive web design, UI using HTML5 grid layouts, CSS3 media queries where its an expression and can be used to either true or false.
+                Ensure efficient web development by supporting designers and app developers while resolving website performance issues.</p>
+        </div>
+      
+      </section>
+      <!-- <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="Eid">Email Address</label>
+          <input type="email" id="Eid" name="emailaddress" placeholder="Enter your email address..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">India</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="australia">Egypt</option>
+            <option value="canada">China</option>
+            <option value="usa">Germany</option>
+            <option value="australia">Russia</option>
+            <option value="canada">Bangladesh</option>
+            <option value="usa">Dubai</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <center><input type="submit" value="Submit"></center>
+      
+        </form>
+      </div> -->
+      
+      <section id="contact">
+        <h2>Let's work together</h2>
+        <p>Contact No:+91 6296795257</p>
+        <p>E-mail: workwithsahin@gmail.com</p>
+        <br>
+        <p>Find me on</p>
+        <div class="contact-links">
+          <a href="https://twitter.com/iamsahin03" target="_blank" class="contact-details">
+            <img src="https://raw.githubusercontent.com/sfoteini/responsive-web-design-freeCodeCamp/afcd86eae3fc73fd254e961fec9f69d190160212/personal-portfolio/images/twitter.svg" alt="twitter logo" class="contact-icon">Twitter
+          </a>
+          <a href="https://www.linkedin.com/in/sahin-mallick-29665b1a7/" target="_blank" class="contact-details">
+            <img src="https://raw.githubusercontent.com/sfoteini/responsive-web-design-freeCodeCamp/afcd86eae3fc73fd254e961fec9f69d190160212/personal-portfolio/images/linkedin.svg" alt="linkedin logo" class="contact-icon">LinkedIn
+          </a>
+          <a href="https://github.com/sahinmallick" target="_blank" class="contact-details">
+            <img src="https://raw.githubusercontent.com/sfoteini/responsive-web-design-freeCodeCamp/afcd86eae3fc73fd254e961fec9f69d190160212/personal-portfolio/images/github.svg" alt="github logo" class="contact-icon">GitHub
+          </a>
+        </div>
+      </section>
+      
+      <footer>
+        <p>
+          <span class="code">&lt;</span>
+          <span class="code">&#47;&gt;</span>
+          with
+          <span class="heart"></span>
+          by Sahin
+        </p>
+      </footer> 
+</body>
+</html>
